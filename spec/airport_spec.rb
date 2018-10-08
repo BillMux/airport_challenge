@@ -3,10 +3,12 @@ require 'plane'
 
 describe Airport do
 
+  before :each do
+    @plane = Plane.new
+  end
+
   it "lands plane at airport" do
-    plane = Plane.new
-    landed_plane = subject.land(plane)
-    # expect(subject.land).to eq landed_plane
+    expect(subject.land(@plane)).to eq [@plane]
   end
 
   # it 'lets planes take off' do

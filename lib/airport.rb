@@ -13,4 +13,8 @@ class Airport
   def take_off
   end
 
+  def hangar_open
+    @hangar
+  end
+
 end
